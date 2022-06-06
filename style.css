@@ -1,0 +1,112 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #00ffff;
+}
+.title1 {
+  color: orangered;
+  font-size: 7.2rem;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s;
+}
+.title2 {
+  color: 333;
+  font-size: 5.2rem;
+  margin: 0 10rem;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.title3 {
+  color: red;
+}
+.eye--section {
+  padding: 5rem 0;
+}
+.eye {
+  background-color: #111;
+  height: 2.4rem;
+  width: 3.2rem;
+  border: solid 0.15rem #999;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+
+  overflow: hidden;
+  opacity: 75;
+  transition: all 0.3s;
+  padding: 0.4rem;
+}
+.blink {
+  transform-origin: 100%;
+  animation: blink 6s infinite;
+}
+.content--section {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+}
+.eye-ball {
+  background-color: #111;
+  width: 0.01rem;
+  height: 0.01rem;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+  transition: scale 0.3s;
+}
+/* .eye-ball::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: orangered;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  z-index: 10000000;
+} */
+.eye-moving {
+  position: absolute;
+  display: block;
+  background-color: orangered;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  z-index: 10000000;
+  transition: all 0.3s;
+}
+.title1:hover {
+  background-color: #fde163;
+  border-radius: 10000rem;
+}
+
+.eye-ball--big {
+  transform: scale(1.5);
+  background-color: #fde163;
+}
+.container {
+  margin: 0 auto;
+  padding: 5.2rem;
+}
+@keyframes blink {
+  0%,
+  100% {
+    transform: scale(1, 0.05);
+  }
+  100%,
+  2% {
+    transform: scale(1, 1);
+  }
+}
