@@ -5,26 +5,39 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #00ffff;
 }
-.title1 {
+/************************************************************************
+///////content and content effects///////////////////////////////////////////
+*************************************************************************/
+.title {
+  background-color: #fff;
   color: orangered;
   font-size: 7.2rem;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s;
+  border-radius: 11px;
+  box-shadow: 1px 5px 20px 0px rgba(0, 0, 0, 0.4);
 }
-.title2 {
-  color: 333;
-  font-size: 5.2rem;
-  margin: 0 10rem;
-  display: inline-block;
-  transition: all 0.3s;
+.title:hover {
+  box-shadow: 1px 5px 24px 0px rgba(0, 0, 0, 0.6);
+  border-radius: 11px;
+  transform: scale(1.1);
+  cursor: pointer;
 }
-.title3 {
-  color: red;
+.content--section {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
 }
+/************************************************************************
+///////eye and eye effects///////////////////////////////////////////
+*************************************************************************/
 .eye--section {
   padding: 5rem 0;
 }
@@ -43,18 +56,10 @@ body {
   padding: 0.4rem;
 }
 .blink {
-  transform-origin: 100%;
+  transform-origin: 50%;
   animation: blink 6s infinite;
 }
-.content--section {
-  margin-top: 20rem;
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  justify-content: center;
-  align-items: center;
-  height: 25rem;
-}
+
 .eye-ball {
   background-color: #111;
   width: 0.01rem;
@@ -65,7 +70,16 @@ body {
   transform: translate(-50%, -50%);
 
   border-radius: 50%;
-  transition: scale 0.3s;
+}
+@keyframes blink {
+  0%,
+  100% {
+    transform: scale(1, 0);
+  }
+  2%,
+  98% {
+    transform: scale(1, 1);
+  }
 }
 /* .eye-ball::after {
   position: absolute;
@@ -81,32 +95,21 @@ body {
   position: absolute;
   display: block;
   background-color: orangered;
-  height: 1.2rem;
-  width: 1.2rem;
+  height: 1.3rem;
+  width: 1.3rem;
   border-radius: 50%;
   z-index: 10000000;
   transition: all 0.3s;
 }
-.title1:hover {
-  background-color: #fde163;
-  border-radius: 10000rem;
-}
 
 .eye-ball--big {
-  transform: scale(1.5);
+  transform: scale(1.2);
   background-color: #fde163;
 }
+/************************************************************************
+///////other elements and effects///////////////////////////////////////
+*************************************************************************/
 .container {
   margin: 0 auto;
   padding: 5.2rem;
-}
-@keyframes blink {
-  0%,
-  100% {
-    transform: scale(1, 0.05);
-  }
-  100%,
-  2% {
-    transform: scale(1, 1);
-  }
 }
